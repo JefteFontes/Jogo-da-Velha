@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jogo da velha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./styleJV.css">
+  </head>
+  <body>
+    <!-- Tela de login -->
+    <main>
+      <!-- Criação dos elementos da tela de login -->
+      <fieldset class="borda">
+        <form class="meio">
+          <h2 class="titu-1">Jogo da Velha</h2>
+          <p class="distancia-itens">Jogador 1:</p>
+          <input class="distancia-itens" type="input" id="name" placeholder="Insira um nome.." maxlength="10">
+          <p class="distancia-itens">Jogador 2:</p>
+          <input class="distancia-itens" type="input" id="name2" placeholder="Insira um nome.." maxlength="10">
+          <br>
+          <hr>
+          <label class="radios distancia-itens">
+            <div>
+              <input id = "X" name="simb" type = "radio" value='X'> X 
+            </div>
+            <div>
+              <input id = "O" name="simb" type = "radio" value='O'> O
+            </div>
+          </label>
+        </form>
+        <!-- Botão que inicia o jogo chamando a função entrada e guardando as informações inseridas -->
+        <button type = "submit" onclick= "entrada()" value=>JOGAR</button>
+      </fieldset>
+    </main>
+
+    <!-- Tela de jogo -->
+    <section class="telaJogo">
+      <h2 class="titu-2">Jogo da Velha</h2>
+      <!-- Exibe o simbolo da vez -->
+      <div class="vez-jogo" id="vez"></div>
+      <!-- Elemento utilizado para a exibição do jogo -->
+      <div id="jogo" class="jogo"></div>
+      <!-- Elemento utilizado para a exibição do placar da partida -->
+      <div class="placar">
+        <div class="jogador" id="jogador-x"></div>
+        <div class="jogador" id="jogador-o"></div>
+      </div>
+    </section>
+
+    <!-- Tela final -->
+    <section class="telaFinal">
+      <div id="msgFinal">
+        <h1 id="ganhador"></h1>
+        <!-- Botão de jogar novamente que retorna a tela de login -->
+        <button id="jogarNovamente" onclick="retornoInicio()">Jogar novamente</button>
+      </div>
+    </section>
+    <!-- Ligando o HTML ao arquivo JavaScript -->
+    <script src="./mainJV.js"></script>
+  </body>
+</html>
